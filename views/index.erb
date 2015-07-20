@@ -1,0 +1,21 @@
+<h2>Whiskeys</h2>
+
+<ul class="Whiskeys">
+  <% @whiskeys.each do |whiskey| %>
+    <li>
+      <strong>
+        <a href="/whiskeys/<%= whiskey.id %>"><%= whiskey.to_s %></a>
+      </strong>
+
+      <a href="/whiskeys/<%= whiskey.id %>/edit">
+        Edit
+      </a>
+
+      <a href="#">Delete Whiskey</a>
+    </li>
+  <% end %>
+</ul>
+
+<hr/>
+
+<a class="btn" href="/whiskeys/new">Add Whiskey</a>
